@@ -21,24 +21,50 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
 
-        <section className="pt-24">
+        <section id="inicio" className="pt-24">
           <Hero />
         </section>
 
-        <WhyUs />
-        <Process />
-        <Services />
-        <BeforeAfter />
-        <Portfolio />
+        <section id="por-que-elegirnos">
+          <WhyUs />
+        </section>
+
+        <section id="proceso">
+          <Process />
+        </section>
+
+        <section id="servicios">
+          <Services />
+        </section>
+
+        <section id="transformacion">
+          <BeforeAfter />
+        </section>
+
+        <section id="portafolio">
+          <Portfolio />
+        </section>
 
         <section id="precios">
           <Pricing />
         </section>
 
-        <CTA />
-        <About />
-        <FAQ />
-        <Contact />
+        <section id="cotizacion">
+          <CTA />
+        </section>
+
+        <section id="nosotros">
+          <About />
+        </section>
+
+        <section id="faq">
+          <FAQ />
+        </section>
+
+        <section id="contacto">
+          <Contact />
+        </section>
+
         <Footer />
       </div>
     </main>
