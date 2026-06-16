@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-6 text-sm font-medium text-[#2b2b2b]/70 xl:flex">
 
           <a href="#por-que-elegirnos" className="transition hover:text-[#2b2b2b]">
-            Why Us
+            ¿Por qué nosotros?
           </a>
 
           <a href="#proceso" className="transition hover:text-[#2b2b2b]">
