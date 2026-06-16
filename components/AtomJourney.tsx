@@ -20,29 +20,27 @@ export default function AtomJourney() {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const rotation = scrollY * 0.12;
+  const rotation = scrollY * 0.15;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <img
         src="/atom.png"
         alt="Quantum Atom"
-        className="absolute left-1/2 top-1/2 w-[600px]"
+        className="absolute left-1/2 top-[40%] w-[650px]"
         style={{
-            opacity: 0.5,
+          opacity: 0.45,
 
-            transform: `
-                translate(-50%, -50%)
-                rotate(${rotation + (isGoingUp ? 180 : 0)}deg)
-             `,
+          transform: `translate(-50%, -50%) rotate(${
+            rotation + (isGoingUp ? 180 : 0)
+          }deg)`,
 
-            transition: "transform 120ms linear",
-         }}
-        />
+          transition: "transform 120ms linear",
+        }}
+      />
     </div>
   );
 }
