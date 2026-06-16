@@ -7,41 +7,46 @@ import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AtomJourney from "@/components/AtomJourney";
 
 export default function Home() {
   return (
-    <main className="bg-[#ebe8de] text-[#2b2b2b]">
-      <Navbar />
+    <main className="relative bg-[#ebe8de] text-[#2b2b2b]">
+      <AtomJourney />
 
-      <section className="pt-24">
-        <Hero />
-      </section>
+      <div className="relative z-10">
+        <Navbar />
 
-      <section id="proceso">
-        <Process />
-      </section>
+        <section className="pt-24">
+          <Hero />
+        </section>
 
-      <section id="servicios">
-        <Services />
-      </section>
+        <section id="proceso">
+          <Process />
+        </section>
 
-      <section id="portafolio">
-        <Portfolio />
-      </section>
+        <section id="servicios">
+          <Services />
+        </section>
 
-      <section id="nosotros">
-        <About />
-      </section>
+        <section id="portafolio">
+          <Portfolio />
+        </section>
 
-      <section id="faq">
-        <FAQ />
-      </section>
+        <section id="nosotros">
+          <About />
+        </section>
 
-      <section id="contacto">
-        <Contact />
-      </section>
+        <section id="faq">
+          <FAQ />
+        </section>
 
-      <Footer />
+        <section id="contacto">
+          <Contact />
+        </section>
+
+        <Footer />
+      </div>
     </main>
   );
 }
