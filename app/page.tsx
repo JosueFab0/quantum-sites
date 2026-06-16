@@ -7,7 +7,11 @@ import About from "@/components/About";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import AtomJourney from "@/components/AtomJourney";
+import AtomJourney from "../components/AtomJourney";
+import WhyUs from "../components/WhyUs";
+import BeforeAfter from "../components/BeforeAfter";
+import CTA from "../components/CTA";
+import Pricing from "../components/Pricing";
 
 export default function Home() {
   return (

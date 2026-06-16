@@ -7,7 +7,7 @@ export default function About() {
         </p>
 
         <h2 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
-          Somos tres personas construyendo un estudio web con criterio.
+          Somos un pequeño equipo profesional construyendo un estudio web con criterio.
         </h2>
 
         <p className="mt-8 max-w-3xl text-lg leading-8 text-[#ebe8de]/65">
