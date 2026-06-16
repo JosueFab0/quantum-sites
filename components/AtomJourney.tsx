@@ -31,18 +31,18 @@ export default function AtomJourney() {
       <img
         src="/atom.png"
         alt="Quantum Atom"
-        className="absolute left-1/2 top-1/2 w-[500px] -translate-x-1/2 -translate-y-1/2"
+        className="absolute left-1/2 top-1/2 w-[600px]"
         style={{
-          opacity: 0.5,
+            opacity: 0.5,
 
-          transform: `
-            translate(-50%, -50%)
-            rotate(${rotation + (isGoingUp ? 180 : 0)}deg)
-          `,
+            transform: `
+                translate(-50%, -50%)
+                rotate(${rotation + (isGoingUp ? 180 : 0)}deg)
+             `,
 
-          transition: "transform 120ms linear",
-        }}
-      />
+            transition: "transform 120ms linear",
+         }}
+        />
     </div>
   );
 }
