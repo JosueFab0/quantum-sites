@@ -22,7 +22,6 @@ export default function AtomJourney() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const rotation = scrollY * 0.6;
   const verticalPosition = 120 + scrollY * 0.25;
   const flip = isGoingUp ? 180 : 0;
 
@@ -31,11 +30,11 @@ export default function AtomJourney() {
       <img
         src="/atom.png"
         alt=""
-        className="absolute left-1/2 w-[260px] -translate-x-1/2 opacity-10"
+        className="absolute left-1/2 w-[260px] -translate-x-1/2 opacity-25"
         style={{
           top: `${verticalPosition}px`,
-          transform: `translateX(-50%) rotate(${rotation + flip}deg)`,
-          transition: "top 100ms linear, transform 100ms linear",
+          transform: `translateX(-50%) rotate(${flip}deg)`,
+          transition: "top 100ms linear, transform 150ms ease",
         }}
       />
     </div>

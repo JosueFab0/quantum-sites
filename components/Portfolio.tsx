@@ -2,17 +2,17 @@ const projects = [
   {
     title: "Restaurante Premium",
     category: "Proyecto Conceptual",
-    image: "/portfolio/restaurant.png",
+    image: "/Portfolio/restaurant.png",
   },
   {
     title: "Clínica Dental",
     category: "Proyecto Conceptual",
-    image: "/portfolio/dental.png",
+    image: "/Portfolio/dental.png",
   },
   {
     title: "Despacho Legal",
     category: "Proyecto Conceptual",
-    image: "/portfolio/lawfirm.png",
+    image: "/Portfolio/lawfirm.png",
   },
 ];
 
