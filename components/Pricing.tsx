@@ -58,7 +58,7 @@ export default function Pricing() {
       </div>
 
       <div className="mt-14 grid gap-4 text-center text-sm uppercase tracking-[0.2em] text-[#2b2b2b]/55 md:grid-cols-4">
-        <div>Responsive</div>
+        <div>Rápido</div>
         <div>Seguro</div>
         <div>Optimizado</div>
         <div>Soporte continuo</div>
