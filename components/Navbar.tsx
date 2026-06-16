@@ -1,39 +1,23 @@
-import Image from "next/image";
-
 export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#2b2b2b]/10 bg-[#ebe8de]/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-
         <a href="#" className="flex items-center">
-          <Image
-            src="/logo.png"
+          <img
+            src="/logo.jpeg"
             alt="Quantum Sites"
-            width={180}
-            height={60}
-            priority
+            className="h-12 w-auto"
           />
         </a>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#2b2b2b]/70">
-          <a
-            href="#servicios"
-            className="hover:text-[#2b2b2b] transition"
-          >
+        <div className="hidden items-center gap-8 text-sm font-medium text-[#2b2b2b]/70 md:flex">
+          <a href="#servicios" className="transition hover:text-[#2b2b2b]">
             Servicios
           </a>
-
-          <a
-            href="#portafolio"
-            className="hover:text-[#2b2b2b] transition"
-          >
+          <a href="#portafolio" className="transition hover:text-[#2b2b2b]">
             Portafolio
           </a>
-
-          <a
-            href="#contacto"
-            className="hover:text-[#2b2b2b] transition"
-          >
+          <a href="#contacto" className="transition hover:text-[#2b2b2b]">
             Contacto
           </a>
         </div>
@@ -44,7 +28,6 @@ export default function Navbar() {
         >
           Cotizar
         </a>
-
       </div>
     </nav>
   );

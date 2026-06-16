@@ -1,55 +1,29 @@
 const steps = [
-  {
-    number: "01",
-    title: "Reunión Inicial",
-    description:
-      "Conocemos tu negocio, objetivos y necesidades.",
-  },
-  {
-    number: "02",
-    title: "Diseño",
-    description:
-      "Creamos una propuesta visual moderna y profesional.",
-  },
-  {
-    number: "03",
-    title: "Desarrollo",
-    description:
-      "Construimos la página optimizada para móviles y velocidad.",
-  },
-  {
-    number: "04",
-    title: "Publicación",
-    description:
-      "Lanzamos tu sitio y lo dejamos listo para recibir clientes.",
-  },
+  ["01", "Conversamos", "Entendemos tu negocio, objetivos y estilo visual."],
+  ["02", "Diseñamos", "Creamos una propuesta clara, moderna y profesional."],
+  ["03", "Desarrollamos", "Construimos una web rápida y adaptable a celular."],
+  ["04", "Publicamos", "Dejamos tu sitio listo para compartir con clientes."],
 ];
 
 export default function Process() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-28">
-      <h2 className="mb-16 text-center text-5xl font-semibold">
-        Nuestro Proceso
+      <h2 className="mb-14 text-5xl font-semibold tracking-[-0.05em]">
+        Un proceso simple, sin humo.
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-4">
-        {steps.map((step) => (
-          <div
-            key={step.number}
-            className="rounded-3xl border border-[#2b2b2b]/10 bg-white/30 p-6"
+      <div className="grid gap-5 md:grid-cols-4">
+        {steps.map(([number, title, text]) => (
+          <article
+            key={number}
+            className="rounded-[2rem] border border-[#2b2b2b]/10 bg-white/35 p-7"
           >
-            <p className="mb-6 text-sm font-bold text-[#2b2b2b]/40">
-              {step.number}
+            <p className="mb-10 text-sm font-bold text-[#2b2b2b]/40">
+              {number}
             </p>
-
-            <h3 className="mb-3 text-xl font-semibold">
-              {step.title}
-            </h3>
-
-            <p className="text-[#2b2b2b]/70">
-              {step.description}
-            </p>
-          </div>
+            <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
+            <p className="leading-7 text-[#2b2b2b]/65">{text}</p>
+          </article>
         ))}
       </div>
     </section>
