@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function AtomJourney() {
   const [scrollY, setScrollY] = useState(0);
   const [isGoingUp, setIsGoingUp] = useState(false);
+
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -12,29 +13,34 @@ export default function AtomJourney() {
       const currentY = window.scrollY;
 
       setIsGoingUp(currentY < lastScrollY.current);
+
       lastScrollY.current = currentY;
       setScrollY(currentY);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const verticalPosition = 120 + scrollY * 0.25;
-  const flip = isGoingUp ? 180 : 0;
+  const rotation = scrollY * 0.12;
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       <img
         src="/atom.png"
-        alt=""
-        className="absolute left-1/2 w-[260px] -translate-x-1/2 opacity-25"
+        alt="Quantum Atom"
+        className="absolute left-1/2 top-1/2 w-[500px] -translate-x-1/2 -translate-y-1/2"
         style={{
-          top: `${verticalPosition}px`,
-          transform: `translateX(-50%) rotate(${flip}deg)`,
-          transition: "top 100ms linear, transform 150ms ease",
+          opacity: 0.5,
+
+          transform: `
+            translate(-50%, -50%)
+            rotate(${rotation + (isGoingUp ? 180 : 0)}deg)
+          `,
+
+          transition: "transform 120ms linear",
         }}
       />
     </div>
