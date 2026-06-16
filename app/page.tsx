@@ -1,17 +1,17 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Process from "@/components/Process";
-import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
-import About from "@/components/About";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import AtomJourney from "../components/AtomJourney";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 import WhyUs from "../components/WhyUs";
+import Process from "../components/Process";
+import Services from "../components/Services";
 import BeforeAfter from "../components/BeforeAfter";
-import CTA from "../components/CTA";
+import Portfolio from "../components/Portfolio";
 import Pricing from "../components/Pricing";
+import CTA from "../components/CTA";
+import About from "../components/About";
+import FAQ from "../components/FAQ";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import AtomJourney from "../components/AtomJourney";
 
 export default function Home() {
   return (
@@ -25,30 +25,20 @@ export default function Home() {
           <Hero />
         </section>
 
-        <section id="proceso">
-          <Process />
+        <WhyUs />
+        <Process />
+        <Services />
+        <BeforeAfter />
+        <Portfolio />
+
+        <section id="precios">
+          <Pricing />
         </section>
 
-        <section id="servicios">
-          <Services />
-        </section>
-
-        <section id="portafolio">
-          <Portfolio />
-        </section>
-
-        <section id="nosotros">
-          <About />
-        </section>
-
-        <section id="faq">
-          <FAQ />
-        </section>
-
-        <section id="contacto">
-          <Contact />
-        </section>
-
+        <CTA />
+        <About />
+        <FAQ />
+        <Contact />
         <Footer />
       </div>
     </main>

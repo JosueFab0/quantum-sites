@@ -1,58 +1,102 @@
 const plans = [
   {
-    name: "Landing Page",
-    price: "Desde $299",
-    description: "Ideal para negocios que necesitan una presencia profesional rápida.",
-    features: ["1 página principal", "Diseño responsive", "WhatsApp integrado", "Formulario de contacto"],
+    title: "Landing Page Simple",
+    price: "$150 - $300",
+    description: "1 página con información básica.",
+    icon: "🌐",
   },
   {
-    name: "Sitio Empresarial",
-    price: "Desde $599",
-    description: "Para negocios que necesitan más secciones y una imagen más completa.",
-    features: ["Hasta 5 secciones", "SEO básico", "Portafolio o servicios", "Publicación incluida"],
+    title: "Negocio Pequeño",
+    price: "$300 - $600",
+    description: "Inicio, servicios, contacto y mapa.",
+    icon: "🏪",
   },
   {
-    name: "Tienda / Sistema",
-    price: "Cotización",
-    description: "Para proyectos con catálogo, pagos, usuarios o funciones especiales.",
-    features: ["Catálogo de productos", "Panel administrativo", "Integraciones", "Soporte personalizado"],
+    title: "Web Corporativa",
+    price: "$600 - $1,500",
+    description: "5 a 10 páginas y diseño personalizado.",
+    icon: "🏢",
+  },
+  {
+    title: "Tienda Online Básica",
+    price: "$800 - $2,500",
+    description: "Productos, carrito y pagos.",
+    icon: "🛒",
+  },
+  {
+    title: "Sistema Web Personalizado",
+    price: "$2,500+",
+    description: "Login, bases de datos y paneles.",
+    icon: "⚙️",
   },
 ];
 
 export default function Pricing() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-28">
+    <section
+      id="precios"
+      className="mx-auto max-w-6xl px-6 py-28"
+    >
       <div className="mb-16 text-center">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#2b2b2b]/45">
-          Inversión
+        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#2b2b2b]/50">
+          Nuestros planes
         </p>
 
-        <h2 className="text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
-          Precios claros para empezar.
+        <h2 className="text-5xl font-semibold tracking-[-0.05em]">
+          Soluciones para cada etapa de tu negocio
         </h2>
-
-        <p className="mx-auto mt-5 max-w-2xl text-[#2b2b2b]/65">
-          Los precios pueden variar según el alcance, pero esto te da una idea realista antes de escribirnos.
-        </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="space-y-5">
         {plans.map((plan) => (
-          <article
-            key={plan.name}
-            className="rounded-[2rem] border border-[#2b2b2b]/10 bg-white/35 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div
+            key={plan.title}
+            className="
+              flex
+              flex-col
+              gap-4
+              rounded-[2rem]
+              border
+              border-[#2b2b2b]/10
+              bg-white/40
+              p-8
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:shadow-xl
+              md:flex-row
+              md:items-center
+              md:justify-between
+            "
           >
-            <h3 className="mb-3 text-2xl font-semibold">{plan.name}</h3>
-            <p className="mb-6 text-4xl font-bold tracking-[-0.04em]">{plan.price}</p>
-            <p className="mb-8 leading-7 text-[#2b2b2b]/65">{plan.description}</p>
+            <div className="flex items-center gap-5">
+              <div className="text-4xl">
+                {plan.icon}
+              </div>
 
-            <ul className="space-y-3 text-[#2b2b2b]/70">
-              {plan.features.map((feature) => (
-                <li key={feature}>✓ {feature}</li>
-              ))}
-            </ul>
-          </article>
+              <div>
+                <h3 className="text-2xl font-semibold">
+                  {plan.title}
+                </h3>
+
+                <p className="text-[#2b2b2b]/65">
+                  {plan.description}
+                </p>
+              </div>
+            </div>
+
+            <div className="text-3xl font-bold">
+              {plan.price}
+            </div>
+          </div>
         ))}
+      </div>
+
+      <div className="mt-14 grid gap-4 text-center md:grid-cols-4">
+        <div>✓ Responsive</div>
+        <div>✓ Seguro</div>
+        <div>✓ Optimizado</div>
+        <div>✓ Soporte</div>
       </div>
     </section>
   );

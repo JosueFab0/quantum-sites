@@ -6,30 +6,27 @@ const projects = [
   },
   {
     title: "Clínica Dental",
-    category: "Próximamente",
+    category: "Proyecto Conceptual",
     image: "/portfolio/dental.png",
   },
   {
     title: "Despacho Legal",
-    category: "Próximamente",
+    category: "Proyecto Conceptual",
     image: "/portfolio/lawfirm.png",
   },
 ];
 
 export default function Portfolio() {
   return (
-    <section
-      id="portafolio"
-      className="mx-auto max-w-7xl px-6 py-28"
-    >
+    <section id="portafolio" className="mx-auto max-w-7xl px-6 py-28">
       <div className="mb-14 text-center">
         <h2 className="text-5xl font-semibold tracking-[-0.05em]">
           Conceptos de Diseño
         </h2>
 
-        <p className="mt-4 text-[#2b2b2b]/60">
-          Algunos conceptos visuales que muestran nuestro enfoque en diseño web
-          moderno y experiencias premium.
+        <p className="mx-auto mt-4 max-w-2xl text-[#2b2b2b]/60">
+          Proyectos demostrativos que muestran cómo adaptamos la identidad
+          visual según cada tipo de negocio.
         </p>
       </div>
 
@@ -37,46 +34,14 @@ export default function Portfolio() {
         {projects.map((project) => (
           <article
             key={project.title}
-            className="
-              group
-              overflow-hidden
-              rounded-[2rem]
-              border
-              border-[#2b2b2b]/10
-              bg-white/35
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:shadow-2xl
-            "
+            className="group overflow-hidden rounded-[2rem] border border-[#2b2b2b]/10 bg-white/35 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
           >
-            <div className="h-72 overflow-hidden bg-[#2b2b2b]/10">
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="
-                    h-full
-                    w-full
-                    object-cover
-                    transition-transform
-                    duration-500
-                    group-hover:scale-105
-                  "
-                />
-              ) : (
-                <div className="flex h-full items-center justify-center bg-[#2b2b2b] text-[#ebe8de]">
-                  <div className="text-center">
-                    <p className="text-lg font-semibold">
-                      Proyecto en desarrollo
-                    </p>
-
-                    <p className="mt-2 text-sm opacity-70">
-                      Próximamente
-                    </p>
-                  </div>
-                </div>
-              )}
+            <div className="flex h-80 items-center justify-center overflow-hidden bg-[#2b2b2b]/5">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
 
             <div className="p-7">
@@ -84,9 +49,7 @@ export default function Portfolio() {
                 {project.category}
               </p>
 
-              <h3 className="text-2xl font-semibold">
-                {project.title}
-              </h3>
+              <h3 className="text-2xl font-semibold">{project.title}</h3>
             </div>
           </article>
         ))}
