@@ -6,7 +6,7 @@ export default function Navbar() {
           <img
             src="/logo.jpeg"
             alt="Quantum Sites"
-            className="h-20 w-auto"
+            className="h-24 w-auto"
           />
         </a>
 

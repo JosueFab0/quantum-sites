@@ -1,8 +1,24 @@
 const steps = [
-  ["01", "Conversamos", "Entendemos tu negocio, objetivos y estilo visual."],
-  ["02", "Diseñamos", "Creamos una propuesta clara, moderna y profesional."],
-  ["03", "Desarrollamos", "Construimos una web rápida y adaptable a celular."],
-  ["04", "Publicamos", "Dejamos tu sitio listo para compartir con clientes."],
+  [
+    "01",
+    "Conversamos",
+    "Entendemos tu negocio, objetivos y estilo visual.",
+  ],
+  [
+    "02",
+    "Diseñamos",
+    "Creamos una propuesta clara, moderna y profesional.",
+  ],
+  [
+    "03",
+    "Desarrollamos",
+    "Construimos una web rápida y adaptable a celular.",
+  ],
+  [
+    "04",
+    "Publicamos",
+    "Dejamos tu sitio listo para compartir con clientes.",
+  ],
 ];
 
 export default function Process() {
@@ -16,13 +32,59 @@ export default function Process() {
         {steps.map(([number, title, text]) => (
           <article
             key={number}
-            className="rounded-[2rem] border border-[#2b2b2b]/10 bg-white/35 p-7"
+            className="
+              group
+              rounded-[2rem]
+              border
+              border-[#2b2b2b]/10
+              bg-white/35
+              p-7
+              transition-all
+              duration-300
+              hover:-translate-y-2
+              hover:bg-[#2b2b2b]
+              hover:shadow-2xl
+              cursor-pointer
+            "
           >
-            <p className="mb-10 text-sm font-bold text-[#2b2b2b]/40">
+            <p
+              className="
+                mb-10
+                text-sm
+                font-bold
+                text-[#2b2b2b]/40
+                transition-colors
+                duration-300
+                group-hover:text-[#ebe8de]/50
+              "
+            >
               {number}
             </p>
-            <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
-            <p className="leading-7 text-[#2b2b2b]/65">{text}</p>
+
+            <h3
+              className="
+                mb-3
+                text-2xl
+                font-semibold
+                transition-colors
+                duration-300
+                group-hover:text-[#ebe8de]
+              "
+            >
+              {title}
+            </h3>
+
+            <p
+              className="
+                leading-7
+                text-[#2b2b2b]/65
+                transition-colors
+                duration-300
+                group-hover:text-[#ebe8de]/75
+              "
+            >
+              {text}
+            </p>
           </article>
         ))}
       </div>
