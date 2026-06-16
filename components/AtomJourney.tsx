@@ -32,7 +32,7 @@ export default function AtomJourney() {
         alt="Quantum Atom"
         className="absolute left-1/2 top-[40%] w-[650px]"
         style={{
-          opacity: 0.45,
+          opacity: 0.25,
 
           transform: `translate(-50%, -50%) rotate(${
             rotation + (isGoingUp ? 180 : 0)
