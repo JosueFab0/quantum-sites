@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#0d2137"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a4a7a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d2137" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#glow)"/>
+  <!-- Tooth shape -->
+  <path d="M340 140 Q320 130 300 150 Q280 200 290 260 Q295 300 320 310 Q340 290 360 290 Q380 290 400 310 Q425 300 430 260 Q440 200 420 150 Q400 130 380 140 Q360 150 340 140Z" fill="none" stroke="#7bbfea" stroke-width="1.5" opacity="0.5"/>
+  <path d="M340 140 Q320 130 300 150 Q280 200 290 260 Q295 300 320 310 Q340 290 360 290 Q380 290 400 310 Q425 300 430 260 Q440 200 420 150 Q400 130 380 140 Q360 150 340 140Z" fill="#7bbfea" opacity="0.07"/>
+  <!-- Cross -->
+  <line x1="360" y1="180" x2="360" y2="280" stroke="#7bbfea" stroke-width="1" opacity="0.3"/>
+  <line x1="310" y1="230" x2="410" y2="230" stroke="#7bbfea" stroke-width="1" opacity="0.3"/>
+  <!-- Text -->
+  <text x="400" y="70" font-family="Helvetica, sans-serif" font-size="13" fill="#7bbfea" opacity="0.6" text-anchor="middle" letter-spacing="5">CLÍNICA DENTAL</text>
+  <text x="400" y="460" font-family="Helvetica, sans-serif" font-size="10" fill="#7bbfea" opacity="0.3" text-anchor="middle" letter-spacing="3">DISEÑO CONCEPTUAL</text>
+  <!-- Grid lines -->
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#7bbfea" stroke-width="0.5" opacity="0.1"/>
+  <line x1="0" y1="120" x2="800" y2="120" stroke="#7bbfea" stroke-width="0.5" opacity="0.1"/>
+</svg>

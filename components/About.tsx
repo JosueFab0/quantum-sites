@@ -1,21 +1,32 @@
 export default function About() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-28">
-      <div className="rounded-[3rem] bg-[#2b2b2b] px-8 py-20 text-[#ebe8de] md:px-16">
-        <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#ebe8de]/50">
+    <section className="mx-auto max-w-7xl px-6 py-24">
+      <div className="mb-16">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[#2b2b2b]/40">
           Quiénes somos
         </p>
-
-        <h2 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
-          Somos un pequeño equipo profesional construyendo un estudio web con criterio.
-        </h2>
-
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-[#ebe8de]/65">
-          Nos enfocamos en diseño, desarrollo y estrategia digital para crear
-          sitios web que se vean profesionales, funcionen bien y sean fáciles
-          de mantener.
-        </p>
       </div>
+
+      <div className="grid gap-16 md:grid-cols-2 md:items-start">
+        <div>
+          <h2 className="text-5xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-6xl">
+            Un estudio web construido con criterio, no con plantillas.
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-8">
+          <p className="text-lg leading-8 text-[#2b2b2b]/65">
+            Somos un equipo pequeño y enfocado. Nos especializamos en diseño, desarrollo y
+            estrategia digital para crear sitios que se vean profesionales, funcionen bien
+            y sean fáciles de mantener a largo plazo.
+          </p>
+          <p className="leading-7 text-[#2b2b2b]/55">
+            No usamos plantillas genéricas. Cada sitio empieza desde cero con un entendimiento
+            claro del negocio, su audiencia y su objetivo. Eso es lo que hace la diferencia.
+          </p>
+        </div>
+      </div>
+
     </section>
   );
 }

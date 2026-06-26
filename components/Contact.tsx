@@ -1,53 +1,53 @@
+import { CONTACT } from "../lib/siteConfig";
+import ContactForm from "./ContactForm";
+
 export default function Contact() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-28">
-      <div className="rounded-[3rem] bg-[#2b2b2b] px-8 py-20 text-center text-[#ebe8de] md:px-20">
+    <section id="contacto" className="mx-auto max-w-7xl px-6 py-24">
+      <div className="overflow-hidden rounded-[3rem] bg-[#2b2b2b] px-8 py-16 text-[#ebe8de] md:px-16">
+        <div className="mb-12 grid gap-6 md:grid-cols-2 md:items-end">
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#ebe8de]/40">
+              Contacto
+            </p>
+            <h2 className="text-5xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-6xl">
+              Hablemos de tu proyecto.
+            </h2>
+          </div>
+          <p className="text-lg leading-8 text-[#ebe8de]/55 md:text-right">
+            La consulta inicial es gratis y sin compromiso. Cuéntanos qué necesitas.
+          </p>
+        </div>
 
-        <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#ebe8de]/50">
-          Contacto
-        </p>
+        {/* Form */}
+        <ContactForm />
 
-        <h2 className="mx-auto max-w-4xl text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
-          Hablemos de tu proyecto.
-        </h2>
-
-        <p className="mx-auto mt-8 max-w-2xl text-lg text-[#ebe8de]/65">
-          Cuéntanos qué negocio tienes y qué tipo de sitio necesitas.
-        </p>
-
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-
+        {/* Or use direct channels */}
+        <div className="mt-12 flex flex-wrap items-center gap-6 border-t border-[#ebe8de]/10 pt-10">
+          <p className="text-sm text-[#ebe8de]/35">O contáctanos directamente:</p>
           <a
-            href="mailto:quantum.sites.cr@gmail.com"
-            className="rounded-full bg-[#ebe8de] px-8 py-4 font-semibold text-[#2b2b2b] transition hover:scale-105"
+            href={`mailto:${CONTACT.email}`}
+            className="text-sm font-medium text-[#ebe8de]/60 underline underline-offset-4 transition-colors hover:text-[#ebe8de]"
           >
-            Enviar correo
+            {CONTACT.email}
           </a>
-
           <a
-            href="https://www.instagram.com/quantum.sites.cr/"
+            href={`https://wa.me/${CONTACT.whatsapp}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[#ebe8de]/20 px-8 py-4 font-semibold text-[#ebe8de] transition hover:bg-[#ebe8de]/10"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="https://wa.me/50683442955"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-[#25D366]/40 bg-[#25D366]/10 px-8 py-4 font-semibold text-[#25D366] transition hover:bg-[#25D366]/20"
+            className="text-sm font-medium text-[#ebe8de]/60 underline underline-offset-4 transition-colors hover:text-[#ebe8de]"
           >
             WhatsApp
           </a>
-
+          <a
+            href={CONTACT.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-[#ebe8de]/60 underline underline-offset-4 transition-colors hover:text-[#ebe8de]"
+          >
+            Instagram
+          </a>
         </div>
-
-        <div className="mt-12 text-sm text-[#ebe8de]/50">
-          quantum.sites.cr@gmail.com
-        </div>
-
       </div>
     </section>
   );

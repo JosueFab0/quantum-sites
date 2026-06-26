@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#1a1a1a"/>
+  <!-- Scale of justice -->
+  <line x1="400" y1="120" x2="400" y2="370" stroke="#d4af72" stroke-width="1.5" opacity="0.5"/>
+  <line x1="280" y1="200" x2="520" y2="200" stroke="#d4af72" stroke-width="1.5" opacity="0.5"/>
+  <!-- Left pan -->
+  <path d="M240 240 Q280 230 320 240 Q300 280 280 280 Q260 280 240 240Z" fill="none" stroke="#d4af72" stroke-width="1" opacity="0.4"/>
+  <line x1="240" y1="240" x2="280" y2="200" stroke="#d4af72" stroke-width="1" opacity="0.3"/>
+  <line x1="320" y1="240" x2="280" y2="200" stroke="#d4af72" stroke-width="1" opacity="0.3"/>
+  <!-- Right pan -->
+  <path d="M480 230 Q520 220 560 230 Q540 270 520 270 Q500 270 480 230Z" fill="none" stroke="#d4af72" stroke-width="1" opacity="0.4"/>
+  <line x1="480" y1="230" x2="520" y2="200" stroke="#d4af72" stroke-width="1" opacity="0.3"/>
+  <line x1="560" y1="230" x2="520" y2="200" stroke="#d4af72" stroke-width="1" opacity="0.3"/>
+  <!-- Base -->
+  <line x1="360" y1="370" x2="440" y2="370" stroke="#d4af72" stroke-width="1.5" opacity="0.4"/>
+  <!-- Text -->
+  <text x="400" y="75" font-family="Georgia, serif" font-size="13" fill="#d4af72" opacity="0.6" text-anchor="middle" letter-spacing="5">DESPACHO LEGAL</text>
+  <text x="400" y="430" font-family="Georgia, serif" font-size="10" fill="#d4af72" opacity="0.35" text-anchor="middle" letter-spacing="3">DISEÑO CONCEPTUAL</text>
+  <!-- Horizontal rule -->
+  <line x1="160" y1="95" x2="310" y2="95" stroke="#d4af72" stroke-width="0.5" opacity="0.3"/>
+  <line x1="490" y1="95" x2="640" y2="95" stroke="#d4af72" stroke-width="0.5" opacity="0.3"/>
+</svg>
