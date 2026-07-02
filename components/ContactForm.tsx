@@ -19,6 +19,7 @@ export default function ContactForm() {
       email: fd.get("email") as string,
       phone: fd.get("phone") as string,
       message: fd.get("message") as string,
+      website: fd.get("website") as string, // honeypot
     };
 
     try {
@@ -53,6 +54,16 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="grid gap-4 sm:grid-cols-2">
+      {/* Honeypot — hidden from humans, bots fill it automatically */}
+      <input
+        name="website"
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none" }}
+      />
+
       <div className="flex flex-col gap-1.5">
         <label htmlFor="name" className="text-xs font-semibold uppercase tracking-widest text-[#ebe8de]/50">
           Nombre *

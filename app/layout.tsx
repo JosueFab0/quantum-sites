@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { headers } from "next/headers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,17 +28,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // nonce is generated per-request in middleware.ts and passed via x-nonce header.
+  // Next.js applies it automatically to its own inline hydration scripts.
+  const nonce = (await headers()).get("x-nonce") ?? "";
+
   return (
     <html
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" {...(nonce ? { nonce } : {})}>
         {children}
         <Analytics />
       </body>
